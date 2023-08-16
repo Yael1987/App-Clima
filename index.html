@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/539a1f1ab7.js" crossorigin="anonymous"></script>
+
+  <title>Simple Weather</title>
+</head>
+<body>
+  <div class="container">
+    <header class="main-header">
+      <nav class="navigation">
+        <h1>Simple Weather</h1>
+        
+        <button class="btn-location">
+          <i class="fa-solid fa-location-arrow btn-icon"></i>
+        </button>
+        
+        <label for="searching">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+        <input type="search" id="searching" class="search-input">
+      </nav>
+
+      <p class="current-date">FECHA ACTUAL</p>
+      <p class="location-info">UBICACION ACTUAL</p>
+    </header>
+
+    <main class="main-content">
+      <div>
+        <div class="weather"></div>
+        <div class="weather-hours"></div>
+      </div>
+      <div>
+        <div class="weather-week"></div>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
