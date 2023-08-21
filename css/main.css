@@ -1,292 +1,74 @@
-/*
-  SPACING SYSTEM (px)
-  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
-  FONT SIZE SYSTEM (px)
-  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-
-  Main color: #d6336c
-  Light-gray-color: #f1f3f5
-  Medium-gray-color: #868e96
-  Dark-gray-color: #343a40;
-*/
-
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html{
-  font-size: 62.5%;
-}
-
-body{
-  font-family: 'Nunito Sans', sans-serif;
-  background-color: #343a40;
-  /* height: 100vh; */
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-
-  color: #f8f9fa;
-}
-
-.container{
-  width: 95%;
-  background-color: #fff;
-  background: linear-gradient(rgba(52, 58, 64, 0.7), rgba(52, 58, 64, 0.7)), url('/src/img/bg-img/morning.jpg');
-  background-size: cover;
-  background-attachment: center;
-  background-position: center 35%;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto 1fr;
-}
-
-.btn{
-  background-color: transparent;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.btn-icon{
-  color: #f8f9fa;
-  font-size: 2rem;
-}
-
-/*************************/
-/* HEADER */
-/*************************/
-
-.header{
-  padding: 2.4rem 4.8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
-  margin-bottom: 3.2rem;
-}
-
-/***********/
-/* NAVIGATION */
-/***********/
-
-.navigation{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.btn-get-location .btn-icon{
-  font-size: 2.4rem;
-}
-
-/* SEARCH FIELD */
-.search-field{
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  column-gap: 1.6rem;
-  /* align-content: center; */
-  /* background-color: rgba(52, 58, 64, 0.2); */
-  background-color: rgba(248, 249, 250, 0.2);
-  padding: 0.8rem 1.6rem;
-  width: 50%;
-  border-radius: 10rem;
-}
-
-.search-label{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.search-input{
-  border: none;
-  font-size: 1.8rem;
-  background-color: transparent;
-  vertical-align: bottom;
-  caret-color: #f8f9fa;
-  color: #f8f9fa;
-  width: 100%;
-}
-
-.search-input-div{
-  position: relative;
-}
-
-.search-input:focus{
-  outline: none;
-  /* vertical-align: center; */
-}
-
-.search-input:focus + .btn-clear-search{
-  display: flex;
-}
-
-.search-input::placeholder{
-  color: #f8f9fa;
-  /* text-transform: ; */
-  font-weight: 300;
-}
-
-.btn-clear-search{
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  display: none;
-}
-
-/***********/
-/* LOCATION AND DATE INFO */
-/***********/
-
-.header-text{
-  text-align: center;;
-}
 
 .current-date{
-  font-size: 3rem;
-  display: inline-block;
-  border-bottom: 2px solid #f8f9fa;
-  font-weight: 500;
+
 }
 
 .location-info{
-  font-size: 1.8rem;
-  font-weight: 300;
+
 }
 
 /*************************/
 /* WEATHER RESUME */
 /*************************/
 
-.weather{
-  /* padding: 0 4.8rem; */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.8rem;
-}
-
-.weather-simple{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .weather-description{
-  margin-top: 4.4rem;
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: calc(25%);
+
 }
 
 .weather-name{
-  position: relative;
 }
 
 .weather-name-primary{
-  font-size: 4.4rem;
-  text-transform: uppercase;
-  line-height: 0.5;
-  display: inline-block;
-  font-weight: 600;
+
 }
 
 .weather-name-secondary{
-  position: absolute;
-  font-size: 3.6rem;
-  top: 80%;
-  right: 0;
-  transform: translateX(50%);
-  display: inline-block;
-  font-weight: 500;
+  
 }
 
 .weather-icon-div{
-  position: absolute;
-  width: 8.6rem;
-  height: 8.6rem;
-  top: 50%;
-  left: 0;
-  transform: translateX(-50%);
-}
 
-.weather-icon{
-  width: 8.6rem;
-  height: 8.6rem;
 }
 
 .weather-temp{
-  font-size: 9.8rem;
-  font-weight: 600;
-  /* position: absolute; */
-  display: inline-block;
-  line-height: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(50%, 50%);
+
 }
 
 /*************************/
 /* WEATHER HOURLY */
 /*************************/
 
+.weather-today{
+
+}
+
 .weather-hourly{
-  background-color: rgba(248, 249, 250, 0.2);
-  width: 100%;
-  padding: 2.4rem 3.6rem;
-  display: flex;
-  justify-content: space-around;
+  /* background-color: transparent; */
+  /* background-color: rgba(248, 249, 250, 0.2); */
+  /* margin-bottom: 4.8rem; */
 }
 
 .weather-hour{
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: rgba(248, 249, 250, 0.2);
 }
 
 .weather-hour-time{
-  margin-bottom: 1.6rem;
-  font-size: 2.4rem;
-  font-weight: 700;
+
 }
 
 .weather-hour-icon{
-  width: 3.6rem;
-  height: 3.6rem;
-  margin-bottom: 1.2rem;
 }
 
 .weather-hour-text{
-  margin-bottom: 1.6rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 3.6rem;
 }
 
 .weather-hour-description{
-  font-size: 1.8rem;
-  font-weight: 300;
-  line-height: 0.8;
+
 }
 
 .weather-hour-temp{
-  font-size: 3rem;
-  font-weight: 700;
-  justify-self: end;
+
 }
 
 /*************************/
@@ -294,7 +76,53 @@ body{
 /*************************/
 
 .weather-advance{
-  background-color: rgba(248, 249, 250, 0.2);
-  height: 100%;
-  width: 100%;
+
+}
+
+.weather-info-container{
+}
+
+.weather-info{
+
+}
+
+.weather-daily{
+  /* overflow: scroll; */
+}
+
+.weather-card{
+}
+
+.weather-card-date{
+}
+
+.weather-card-date-full{
+}
+
+.weather-card-date-day{
+}
+
+.weather-card-temp{
+}
+
+.weather-card-temp-max{
+
+}
+
+.weather-card-info{
+}
+
+.weather-card-info-text{
+}
+
+.weather-card-info-icon{
+}
+
+.weather-card-extra{
+}
+
+.weather-card-extra-item{
+}
+
+.weather-card-extra-text{
 }
