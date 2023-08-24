@@ -121,16 +121,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function getLocationCoords() {
   return new Promise((resolve) => {
-    if ("geolocation" in navigator) {
+    if ("geolocation" in navigator) {      
       navigator.geolocation.getCurrentPosition(
-        (position) =>
+        (position) => {
+          
+          console.log(position);
+          
           resolve({
             success: true,
             data: {
               lat: position.coords.latitude,
               lng: position.coords.longitude,
             },
-          }),
+          })
+        },
         (error) =>
           resolve({
             success: false,
