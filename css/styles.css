@@ -82,19 +82,42 @@ body{
 
 /* LAYOUT */
 
-.container{
-  width: 95%;
-  height: 100%;
-  background-color: #fff;
-  background: linear-gradient(rgba(52, 58, 64, 0.6), rgba(52, 58, 64, 0.6)), url('/src/img/bg-img/morning.jpg');
+.center-bg{
   background-size: cover;
   background-attachment: center;
   background-position: center 35%;
+}
+
+.container{
+  width: 95%;
+  height: 100%;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto;
   overflow: scroll;
   scrollbar-width: none;
+  background-size: cover;
+  background-attachment: center;
+}
+
+.morning{
+  background-image: linear-gradient(rgba(52, 58, 64, 0.6), rgba(52, 58, 64, 0.6)), url('../src/img/bg-img/morning.jpg');
+  background-position: center 35%;
+}
+
+.day{
+  background-image: linear-gradient(rgba(52, 58, 64, 0.6), rgba(52, 58, 64, 0.6)), url('../src/img/bg-img/day.jpg');
+  background-position: center 25%;
+}
+
+.evening{
+  background-image: linear-gradient(rgba(52, 58, 64, 0.6), rgba(52, 58, 64, 0.6)), url('../src/img/bg-img/evening.jpg');
+  background-position: center 80%;
+}
+
+.night{
+  background-image: linear-gradient(rgba(52, 58, 64, 0.6), rgba(52, 58, 64, 0.6)), url('../src/img/bg-img/night.jpg');
+  background-position: center 65%;
 }
 
 .container::-webkit-scrollbar{
@@ -274,14 +297,28 @@ body{
   font-weight: 600;
 }
 
+.description__name-primary span{
+  font-size: 3.6rem;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
 .description__name-secondary{
   position: absolute;
   font-size: 3.6rem;
   top: 80%;
   right: 0;
+  width: 110%;
   transform: translateX(50%);
   display: inline-block;
-  font-weight: 500;
+  font-weight: 400;
+}
+
+.description__name-secondary span{
+  display: block;
+  line-height: 0.8;
+  font-weight: 300;
+  font-size: 2.4rem;
 }
 
 .description__icon-container{
@@ -324,6 +361,15 @@ body{
 .card--today__icon{
   width: 4.4rem;
   height: 4.4rem;
+}
+
+.card--today .card__unit{
+  margin-top: 1.8rem;
+}
+
+.card__unit.uvi{
+  display: block;
+  line-height: 1;
 }
 
 /***********************/

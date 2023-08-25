@@ -19,385 +19,383 @@
   <title>Weathy</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container evening">
+    <header class="header">
+      <nav class="navigation">
+        <button class="btn btn--get-location">
+          <ion-icon name="navigate-outline" class="btn-icon"></ion-icon>
+        </button>
 
-      <header class="header">
-        <nav class="navigation">
-          <button class="btn btn--get-location">
-            <ion-icon name="navigate-outline" class="btn-icon"></ion-icon>
-          </button>
+        <form class="search-field"> 
+          <label for="searching" class="search-field__label">
+            <ion-icon name="search-outline" class="btn-icon"></ion-icon>
+          </label>
 
-          <form class="search-field"> 
-            <label for="searching" class="search-field__label">
-              <ion-icon name="search-outline" class="btn-icon"></ion-icon>
-            </label>
-
-            <div class="search-field__input-container">
-              <input type="search" id="searching" class="search-field__input" placeholder="Buscar una ciudad...">
-              
-              <button class="btn btn--clear-search">
-                <ion-icon name="close-outline" class="btn-icon"></ion-icon>
-              </button>
-            </div>
-
-            <button class="btn search-field__submit">
-              <ion-icon name="return-down-forward-outline" class="btn-icon"></ion-icon>
-            </button>
-          </form>
-
-        </nav>
-
-        <div class="header__text">
-          <p class="header__text-date">Sab, 19 de Ago, 20:05</p>
-          <p class="header__text-location">Nezahualcoyotl / México</p>
-        </div>
-      </header>
-
-      <main class="weather">
-        <section class="weather--simple">
-          <div class="description">
-            <div class="description__name">
-              <p class="description__name-primary">Tormenta</p>
-              <p class="description__name-secondary">Electrica</p>
-              
-              <div class="description__icon-container">
-                <object type="image/svg+xml" data="/src/img/icons/Light/cloud-bolt-moon.svg" class="description__icon"></object>
-              </div>
-            </div>
-            <p class="description__temp">20°C</p>
-          </div>
+          <div class="search-field__input-container">
+            <input type="search" id="searching" class="search-field__input" placeholder="Buscar una ciudad...">
             
-          <div class="hourly cards-container">          
-            <div class="card card--hourly">
-              <p class="card--hourly__time">21:00</p>
+            <button class="btn btn--clear-search">
+              <ion-icon name="close-outline" class="btn-icon"></ion-icon>
+            </button>
+          </div>
 
-              <object type="image/svg+xml" data="/src/img/icons/Light/cloud-showers-heavy.svg" class="card__icon"></object>
+          <button class="btn search-field__submit">
+            <ion-icon name="return-down-forward-outline" class="btn-icon"></ion-icon>
+          </button>
+        </form>
 
-              <div class="card__text">
-                <p class="card__text--p">Lluvia</p>
-                <p class="card__text--p">fuerte</p>
-              </div>
-              
-              <p class="card__unit">19&deg;</p>
+      </nav>
+
+      <div class="header__text">
+        <p class="header__text-date">Sab, 19 de Ago, 20:05</p>
+        <p class="header__text-location">Nezahualcoyotl / México</p>
+      </div>
+    </header>
+
+    <main class="weather">
+      <section class="weather--simple">
+        <div class="description">
+          <div class="description__name">
+            <p class="description__name-primary">Tormenta <span>&nbsp;</span></p>
+            <p class="description__name-secondary">llovizna fuerte</p>
+            
+            <div class="description__icon-container">
+              <object type="image/svg+xml" data="/src/img/icons/cloud-bolt-moon.svg" class="description__icon"></object>
+            </div>
+          </div>
+          <p class="description__temp">20°C</p>
+        </div>
+          
+        <div class="hourly cards-container">          
+          <div class="card card--hourly">
+            <p class="card--hourly__time">21:00</p>
+
+            <object type="image/svg+xml" data="/src/img/icons/cloud-showers-heavy.svg" class="card__icon"></object>
+
+            <div class="card__text">
+              <p class="card__text--p">Lluvia</p>
+              <p class="card__text--p">fuerte</p>
+            </div>
+            
+            <p class="card__unit">19&deg;</p>
+          </div>
+
+          <div class="card card--hourly">
+            <p class="card--hourly__time">22:00</p>
+            <object type="image/svg+xml" data="/src/img/icons/cloud-moon-rain.svg" class="card__icon"></object>
+            <div class="card__text">
+              <p class="card__text--p">Lluvia</p>
+              <p class="card__text--p">ligera</p>
             </div>
 
-            <div class="card card--hourly">
-              <p class="card--hourly__time">22:00</p>
-              <object type="image/svg+xml" data="/src/img/icons/Light/cloud-moon-rain.svg" class="card__icon"></object>
+            <p class="card__unit">18&deg;</p>
+          </div>
+
+          <div class="card card--hourly">
+            <p class="card--hourly__time">23:00</p>
+            <object type="image/svg+xml" data="/src/img/icons/cloud-moon-rain.svg" class="card__icon"></object>
+            <div class="card__text">
+              <p class="card__text--p">Lluvia</p>
+              <p class="card__text--p">ligera</p>
+            </div>
+            <p class="card__unit">19&deg;</p>
+          </div>
+
+          <div class="card card--hourly">
+            <p class="card--hourly__time">00:00</p>
+            <object type="image/svg+xml" data="/src/img/icons/clouds-moon.svg" class="card__icon"></object>
+            <div class="card__text">
+              <p class="card__text--p">Nublado</p>
+            </div>
+            <p class="card__unit">18&deg;</p>
+          </div>
+
+          <div class="card card--hourly">
+            <p class="card--hourly__time">01:00</p>
+            <object type="image/svg+xml" data="/src/img/icons/clouds-moon.svg" class="card__icon"></object>
+            <div class="card__text">
+              <p class="card__text--p">Nublado</p>
+            </div>
+            <p class="card__unit">17&deg;</p>
+          </div>
+
+          <div class="card card--hourly">
+            <p class="card--hourly__time">02:00</p>
+            <object type="image/svg+xml" data="/src/img/icons/moon-cloud.svg" class="card__icon"></object>
+            <div class="card__text">
+              <p class="card__text--p">Nubes</p>
+              <p class="card__text--p">dispersas</p>
+            </div>
+            <p class="card__unit">18&deg;</p>
+          </div>
+        </div>
+        
+        <div class="weather--advance">
+          <h2 class="heading-secondary">Informacion diaria</h2>
+          
+          <div class="today cards-container">
+            <div class="card card--today">
+              <object type="image/svg+xml" data="/src/img/icons/wind.svg" class="card__icon card--today__icon"></object>
+
               <div class="card__text">
-                <p class="card__text--p">Lluvia</p>
-                <p class="card__text--p">ligera</p>
+                <p class="card__text--p">Velocidad</p>
+                <p class="card__text--p">del viento</p>
               </div>
 
-              <p class="card__unit">18&deg;</p>
+              <p class="card__unit wind_speed">20 <span class="span-sm">km/h</span></p>
             </div>
-
-            <div class="card card--hourly">
-              <p class="card--hourly__time">23:00</p>
-              <object type="image/svg+xml" data="/src/img/icons/Light/cloud-moon-rain.svg" class="card__icon"></object>
+          
+            <div class="card card--today">
+              <object type="image/svg+xml" data="/src/img/icons/sunrise.svg" class="card__icon card--today__icon"></object>
               <div class="card__text">
-                <p class="card__text--p">Lluvia</p>
-                <p class="card__text--p">ligera</p>
+                <p class="card__text--p">Amanecer</p>
               </div>
-              <p class="card__unit">19&deg;</p>
+              <p class="card__unit sunrise">07:00</p>
             </div>
-
-            <div class="card card--hourly">
-              <p class="card--hourly__time">00:00</p>
-              <object type="image/svg+xml" data="/src/img/icons/Light/clouds-moon.svg" class="card__icon"></object>
+          
+            <div class="card card--today">
+              <object type="image/svg+xml" data="/src/img/icons/sunset.svg" class="card__icon card--today__icon"></object>
               <div class="card__text">
-                <p class="card__text--p">Nublado</p>
+                <p class="card__text--p">Atardecer</p>
               </div>
-              <p class="card__unit">18&deg;</p>
+              <p class="card__unit sunset">20:00</p>
             </div>
-
-            <div class="card card--hourly">
-              <p class="card--hourly__time">01:00</p>
-              <object type="image/svg+xml" data="/src/img/icons/Light/clouds-moon.svg" class="card__icon"></object>
+          
+            <div class="card card--today">
+              <object type="image/svg+xml" data="/src/img/icons/raindrops.svg" class="card__icon card--today__icon"></object>
               <div class="card__text">
-                <p class="card__text--p">Nublado</p>
+                <p class="card__text--p">Humedad</p>
               </div>
-              <p class="card__unit">17&deg;</p>
+              <p class="card__unit humidity">50%</p>
             </div>
-
-            <div class="card card--hourly">
-              <p class="card--hourly__time">02:00</p>
-              <object type="image/svg+xml" data="/src/img/icons/Light/moon-cloud.svg" class="card__icon"></object>
+          
+            <div class="card card--today">
+              <object type="image/svg+xml" data="/src/img/icons/sun.svg" class="card__icon card--today__icon"></object>
+              <div class="card__text">
+                <p class="card__text--p">Indice</p>
+                <p class="card__text--p">UV</p>
+              </div>
+              <p class="card__unit uvi"><span class="span-sm">Muy<br>alto</span></p>
+            </div>
+          
+            <div class="card card--today">
+              <object type="image/svg+xml" data="/src/img/icons/clouds.svg" class="card__icon card--today__icon"></object>
               <div class="card__text">
                 <p class="card__text--p">Nubes</p>
-                <p class="card__text--p">dispersas</p>
               </div>
-              <p class="card__unit">18&deg;</p>
+              <p class="card__unit clouds">60%</p>
             </div>
           </div>
-          
-          <div class="weather--advance">
-            <h2 class="heading-secondary">Informacion diaria</h2>
-            
-            <div class="today cards-container">
-              <div class="card card--today">
-                <object type="image/svg+xml" data="/src/img/icons/Light/wind.svg" class="card__icon card--today__icon"></object>
+        </div>
+      </section>
 
-                <div class="card__text">
-                  <p class="card__text--p">Velocidad</p>
-                  <p class="card__text--p">del viento</p>
-                </div>
+      <section class="weather--advance">
+        <h2 class="heading-secondary">Clima en la semana</h2>
 
-                <p class="card__unit">20 <span class="span-sm">km/h</span></p>
+        <div class="daily">
+          <div class="card card--daily">
+            <div class="card--daily__date">
+              <p class="card--daily__date-full">20 de Ago</p>
+              <p class="card--daily__date-day">Domingo</p>
+            </div>
+
+            <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
+
+            <div class="card--daily__info">
+              <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
+              <p class="card--daily__info-text">Parcialmente nublado</p>
+            </div>
+
+            <div class="card--daily__extras">
+              <div class="extras__item">
+                <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">19 km/h</p>
               </div>
-            
-              <div class="card card--today">
-                <object type="image/svg+xml" data="/src/img/icons/Light/sunrise.svg" class="card__icon card--today__icon"></object>
-                <div class="card__text">
-                  <p class="card__text--p">Amanecer</p>
-                </div>
-                <p class="card__unit">07:00</p>
+
+              <div class="extras__item">
+                <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">60%</p>
               </div>
-            
-              <div class="card card--today">
-                <object type="image/svg+xml" data="/src/img/icons/Light/sunset.svg" class="card__icon card--today__icon"></object>
-                <div class="card__text">
-                  <p class="card__text--p">Atardecer</p>
-                </div>
-                <p class="card__unit">20:00</p>
-              </div>
-            
-              <div class="card card--today">
-                <object type="image/svg+xml" data="/src/img/icons/Light/raindrops.svg" class="card__icon card--today__icon"></object>
-                <div class="card__text">
-                  <p class="card__text--p">Humedad</p>
-                </div>
-                <p class="card__unit">50%</p>
-              </div>
-            
-              <div class="card card--today">
-                <object type="image/svg+xml" data="/src/img/icons/Light/sun.svg" class="card__icon card--today__icon"></object>
-                <div class="card__text">
-                  <p class="card__text--p">Indice</p>
-                  <p class="card__text--p">UV</p>
-                </div>
-                <p class="card__unit"><span class="span-sm">Peligroso</span></p>
-              </div>
-            
-              <div class="card card--today">
-                <object type="image/svg+xml" data="/src/img/icons/Light/clouds.svg" class="card__icon card--today__icon"></object>
-                <div class="card__text">
-                  <p class="card__text--p">Nubes</p>
-                </div>
-                <p class="card__unit">60%</p>
+
+              <div class="extras__item">
+                <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">Bajo</p>
               </div>
             </div>
           </div>
-        </section>
 
-        <section class="weather--advance">
-          <h2 class="heading-secondary">Clima en la semana</h2>
-
-          <div class="daily">
-            <div class="card card--daily">
-              <div class="card--daily__date">
-                <p class="card--daily__date-full">20 de Ago</p>
-                <p class="card--daily__date-day">Domingo</p>
-              </div>
-
-              <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
-
-              <div class="card--daily__info">
-                <object data="/src/img/icons/Light/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
-                <p class="card--daily__info-text">Parcialmente nublado</p>
-              </div>
-
-              <div class="card--daily__extras">
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">19 km/h</p>
-                </div>
-
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">60%</p>
-                </div>
-
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">Bajo</p>
-                </div>
-              </div>
+          <div class="card card--daily">
+            <div class="card--daily__date">
+              <p class="card--daily__date-full">21 de Ago</p>
+              <p class="card--daily__date-day">Lunes</p>
             </div>
-
-            <div class="card card--daily">
-              <div class="card--daily__date">
-                <p class="card--daily__date-full">21 de Ago</p>
-                <p class="card--daily__date-day">Lunes</p>
-              </div>
-              <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
-              <div class="card--daily__info">
-                <object data="/src/img/icons/Light/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
-                <p class="card--daily__info-text">Parcialmente nublado</p>
-              </div>
-              <div class="card--daily__extras">
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">19 km/h</p>
-                </div>
-
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">60%</p>
-                </div>
-
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">Bajo</p>
-                </div>
-              </div>
+            <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
+            <div class="card--daily__info">
+              <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
+              <p class="card--daily__info-text">Parcialmente nublado</p>
             </div>
-
-            <div class="card card--daily">
-              <div class="card--daily__date">
-                <p class="card--daily__date-full">22 de Ago</p>
-                <p class="card--daily__date-day">Martes</p>
+            <div class="card--daily__extras">
+              <div class="extras__item">
+                <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">19 km/h</p>
               </div>
-              <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
-              <div class="card--daily__info">
-                <object data="/src/img/icons/Light/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
-                <p class="card--daily__info-text">Parcialmente nublado</p>
+
+              <div class="extras__item">
+                <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">60%</p>
               </div>
-              <div class="card--daily__extras">
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">19 km/h</p>
-                </div>
 
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">60%</p>
-                </div>
-
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">Bajo</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card card--daily">
-              <div class="card--daily__date">
-                <p class="card--daily__date-full">23 de Ago</p>
-                <p class="card--daily__date-day">Miercoles</p>
-              </div>
-              <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
-              <div class="card--daily__info">
-                <object data="/src/img/icons/Light/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
-                <p class="card--daily__info-text">Parcialmente nublado</p>
-              </div>
-              <div class="card--daily__extras">
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">19 km/h</p>
-                </div>
-
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">60%</p>
-                </div>
-
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">Bajo</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card card--daily">
-              <div class="card--daily__date">
-                <p class="card--daily__date-full">24 de Ago</p>
-                <p class="card--daily__date-day">Jueves</p>
-              </div>
-              <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
-              <div class="card--daily__info">
-                <object data="/src/img/icons/Light/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
-                <p class="card--daily__info-text">Parcialmente nublado</p>
-              </div>
-              <div class="card--daily__extras">
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">19 km/h</p>
-                </div>
-
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">60%</p>
-                </div>
-
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">Bajo</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card card--daily">
-              <div class="card--daily__date">
-                <p class="card--daily__date-full">25 de Ago</p>
-                <p class="card--daily__date-day">Viernes</p>
-              </div>
-              <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
-              <div class="card--daily__info">
-                <object data="/src/img/icons/Light/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
-                <p class="card--daily__info-text">Parcialmente nublado</p>
-              </div>
-              <div class="card--daily__extras">
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">19 km/h</p>
-                </div>
-
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">60%</p>
-                </div>
-
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">Bajo</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="card card--daily">
-              <div class="card--daily__date">
-                <p class="card--daily__date-full">26 de Ago</p>
-                <p class="card--daily__date-day">Sabado</p>
-              </div>
-              <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
-              <div class="card--daily__info">
-                <object data="/src/img/icons/Light/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
-                <p class="card--daily__info-text">Parcialmente nublado</p>
-              </div>
-              <div class="card--daily__extras">
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">19 km/h</p>
-                </div>
-
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">60%</p>
-                </div>
-
-                <div class="extras__item">
-                  <object data="/src/img/icons/Light/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
-                  <p class="extras__item-text">Bajo</p>
-                </div>
+              <div class="extras__item">
+                <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">Bajo</p>
               </div>
             </div>
           </div>
-        </section>
-      </main>
+
+          <div class="card card--daily">
+            <div class="card--daily__date">
+              <p class="card--daily__date-full">22 de Ago</p>
+              <p class="card--daily__date-day">Martes</p>
+            </div>
+            <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
+            <div class="card--daily__info">
+              <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
+              <p class="card--daily__info-text">Parcialmente nublado</p>
+            </div>
+            <div class="card--daily__extras">
+              <div class="extras__item">
+                <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">19 km/h</p>
+              </div>
+
+              <div class="extras__item">
+                <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">60%</p>
+              </div>
+
+              <div class="extras__item">
+                <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">Bajo</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--daily">
+            <div class="card--daily__date">
+              <p class="card--daily__date-full">23 de Ago</p>
+              <p class="card--daily__date-day">Miercoles</p>
+            </div>
+            <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
+            <div class="card--daily__info">
+              <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
+              <p class="card--daily__info-text">Parcialmente nublado</p>
+            </div>
+            <div class="card--daily__extras">
+              <div class="extras__item">
+                <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">19 km/h</p>
+              </div>
+
+              <div class="extras__item">
+                <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">60%</p>
+              </div>
+
+              <div class="extras__item">
+                <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">Bajo</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--daily">
+            <div class="card--daily__date">
+              <p class="card--daily__date-full">24 de Ago</p>
+              <p class="card--daily__date-day">Jueves</p>
+            </div>
+            <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
+            <div class="card--daily__info">
+              <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
+              <p class="card--daily__info-text">Parcialmente nublado</p>
+            </div>
+            <div class="card--daily__extras">
+              <div class="extras__item">
+                <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">19 km/h</p>
+              </div>
+
+              <div class="extras__item">
+                <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">60%</p>
+              </div>
+
+              <div class="extras__item">
+                <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">Bajo</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--daily">
+            <div class="card--daily__date">
+              <p class="card--daily__date-full">25 de Ago</p>
+              <p class="card--daily__date-day">Viernes</p>
+            </div>
+            <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
+            <div class="card--daily__info">
+              <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
+              <p class="card--daily__info-text">Parcialmente nublado</p>
+            </div>
+            <div class="card--daily__extras">
+              <div class="extras__item">
+                <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">19 km/h</p>
+              </div>
+
+              <div class="extras__item">
+                <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">60%</p>
+              </div>
+
+              <div class="extras__item">
+                <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">Bajo</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--daily">
+            <div class="card--daily__date">
+              <p class="card--daily__date-full">26 de Ago</p>
+              <p class="card--daily__date-day">Sabado</p>
+            </div>
+            <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
+            <div class="card--daily__info">
+              <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
+              <p class="card--daily__info-text">Parcialmente nublado</p>
+            </div>
+            <div class="card--daily__extras">
+              <div class="extras__item">
+                <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">19 km/h</p>
+              </div>
+
+              <div class="extras__item">
+                <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">60%</p>
+              </div>
+
+              <div class="extras__item">
+                <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <p class="extras__item-text">Bajo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
   </div>
-
   <script type="module" src="js/app.js"></script>
 </body>
 </html>

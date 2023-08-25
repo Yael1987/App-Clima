@@ -17,13 +17,4 @@ export default class DataFormater {
 
     return formatter.format(date);
   }
-
-  getDescriptionByID(id) {
-    const options = {
-      804: ['Nublado'],
-      
-    }
-
-    return options[id];
-  }
 }

@@ -47,11 +47,7 @@ export default class API {
         return {
           time: dataFormater.formatHourFromUnix(dt),
           temp,
-          weather: {
-            description: weather[0].description,
-            main: weather[0].main,
-            id: weather[0].id
-          }
+          weatherId: weather[0].id
         };
       });
 
@@ -64,11 +60,7 @@ export default class API {
             min: temp.min,
             max: temp.max
           },
-          weather: {
-            description: weather[0].description,
-            main: weather[0].main,
-            id: weather[0].id,
-          },
+          weatherId: weather[0].id,
           uvi, 
           wind_speed,
           humidity
@@ -87,15 +79,11 @@ export default class API {
             temp,
             uvi,
             wind_speed,
-            weather: {
-              description: weather[0].description,
-              main: weather[0].main,
-              id: weather[0].id,
-            },
+            weatherId: weather[0].id,
           },
           hourly: hourlyData,
           daily: dailyData,
-        }
+        },
       };
     } catch (error) {
       return {
