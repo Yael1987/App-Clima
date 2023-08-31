@@ -467,13 +467,9 @@ const getWeatherDescription = (id, time, long = 'short') => {
 
   if (time < 6) {
     dayTime = "night";
-  }
-
-  if (time >= 6 && time < 19) {
+  }else if (time >= 6 && time < 19) {
     dayTime = 'day';
-  }
-
-  if (time >= 19 && time < 24) {
+  }else if (time >= 19 && time < 24) {
     dayTime = 'night';
   }
 
@@ -481,7 +477,7 @@ const getWeatherDescription = (id, time, long = 'short') => {
   if (id >= 500 & id < 600) {
     return {
       description: weatherRain[id].description[long],
-      iconURl: weatherRain[id][dayTime]
+      iconUrl: weatherRain[id][dayTime]
     }
   }    
 
