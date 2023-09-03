@@ -18,8 +18,8 @@
 
   <title>Weathy</title>
 </head>
-<body>
-  <div class="container evening">
+<body >
+  <div class="container evening ">
     <header class="header">
       <nav class="navigation">
         <button class="btn btn--get-location">
@@ -42,6 +42,11 @@
           <button class="btn search-field__submit">
             <ion-icon name="return-down-forward-outline" class="btn-icon"></ion-icon>
           </button>
+
+          <div class="search-matches">
+            <div class="search-matches__el">Match 1</div>
+            <div class="search-matches__el">Match 2</div>
+          </div>
         </form>
 
       </nav>
@@ -60,7 +65,10 @@
             <p class="description__name-secondary">llovizna fuerte</p>
             
             <div class="description__icon-container">
-              <object type="image/svg+xml" data="/src/img/icons/cloud-bolt-moon.svg" class="description__icon"></object>
+              <!-- <object type="image/svg+xml" data="/src/img/icons/cloud-bolt-moon.svg" class="description__icon"></object> -->
+              <svg class="description__icon">
+                <use xlink:href="./src/img/icons.svg#icon-cloud-bolt-moon"></use>
+              </svg>
             </div>
           </div>
           <p class="description__temp">20°C</p>
@@ -70,7 +78,9 @@
           <div class="card card--hourly">
             <p class="card--hourly__time">21:00</p>
 
-            <object type="image/svg+xml" data="/src/img/icons/cloud-showers-heavy.svg" class="card__icon"></object>
+            <svg class="card__icon">
+              <use xlink:href="/src/img/icons.svg#icon-cloud-showers-heavy"></use>
+            </svg>
 
             <div class="card__text">
               <p class="card__text--p">Lluvia</p>
@@ -82,7 +92,9 @@
 
           <div class="card card--hourly">
             <p class="card--hourly__time">22:00</p>
-            <object type="image/svg+xml" data="/src/img/icons/cloud-moon-rain.svg" class="card__icon"></object>
+            <svg class="card__icon">
+              <use xlink:href="/src/img/icons.svg#icon-cloud-moon-rain"></use>
+            </svg>
             <div class="card__text">
               <p class="card__text--p">Lluvia</p>
               <p class="card__text--p">ligera</p>
@@ -93,7 +105,9 @@
 
           <div class="card card--hourly">
             <p class="card--hourly__time">23:00</p>
-            <object type="image/svg+xml" data="/src/img/icons/cloud-moon-rain.svg" class="card__icon"></object>
+            <svg class="card__icon">
+              <use xlink:href="/src/img/icons.svg#icon-cloud-moon-rain"></use>
+            </svg>
             <div class="card__text">
               <p class="card__text--p">Lluvia</p>
               <p class="card__text--p">ligera</p>
@@ -103,7 +117,9 @@
 
           <div class="card card--hourly">
             <p class="card--hourly__time">00:00</p>
-            <object type="image/svg+xml" data="/src/img/icons/clouds-moon.svg" class="card__icon"></object>
+            <svg class="card__icon">
+              <use xlink:href="/src/img/icons.svg#icon-clouds-moon"></use>
+            </svg>
             <div class="card__text">
               <p class="card__text--p">Nublado</p>
             </div>
@@ -112,7 +128,9 @@
 
           <div class="card card--hourly">
             <p class="card--hourly__time">01:00</p>
-            <object type="image/svg+xml" data="/src/img/icons/clouds-moon.svg" class="card__icon"></object>
+            <svg class="card__icon">
+              <use xlink:href="/src/img/icons.svg#icon-clouds-moon"></use>
+            </svg>
             <div class="card__text">
               <p class="card__text--p">Nublado</p>
             </div>
@@ -121,7 +139,9 @@
 
           <div class="card card--hourly">
             <p class="card--hourly__time">02:00</p>
-            <object type="image/svg+xml" data="/src/img/icons/moon-cloud.svg" class="card__icon"></object>
+            <svg class="card__icon">
+              <use xlink:href="/src/img/icons.svg#icon-moon-cloud"></use>
+            </svg>
             <div class="card__text">
               <p class="card__text--p">Nubes</p>
               <p class="card__text--p">dispersas</p>
@@ -135,7 +155,9 @@
           
           <div class="today cards-container">
             <div class="card card--today">
-              <object type="image/svg+xml" data="/src/img/icons/wind.svg" class="card__icon card--today__icon"></object>
+              <svg class="card__icon card--today__icon">
+                <use xlink:href="/src/img/icons.svg#icon-wind"></use>
+              </svg>
 
               <div class="card__text">
                 <p class="card__text--p">Velocidad</p>
@@ -146,7 +168,9 @@
             </div>
           
             <div class="card card--today">
-              <object type="image/svg+xml" data="/src/img/icons/sunrise.svg" class="card__icon card--today__icon"></object>
+              <svg class="card__icon card--today__icon">
+                <use xlink:href="/src/img/icons.svg#icon-sunrise"></use>
+              </svg>
               <div class="card__text">
                 <p class="card__text--p">Amanecer</p>
               </div>
@@ -154,7 +178,9 @@
             </div>
           
             <div class="card card--today">
-              <object type="image/svg+xml" data="/src/img/icons/sunset.svg" class="card__icon card--today__icon"></object>
+              <svg class="card__icon card--today__icon">
+                <use xlink:href="/src/img/icons.svg#icon-sunset"></use>
+              </svg>
               <div class="card__text">
                 <p class="card__text--p">Atardecer</p>
               </div>
@@ -162,7 +188,9 @@
             </div>
           
             <div class="card card--today">
-              <object type="image/svg+xml" data="/src/img/icons/raindrops.svg" class="card__icon card--today__icon"></object>
+              <svg class="card__icon card--today__icon">
+                <use xlink:href="/src/img/icons.svg#icon-raindrops"></use>
+              </svg>
               <div class="card__text">
                 <p class="card__text--p">Humedad</p>
               </div>
@@ -170,7 +198,9 @@
             </div>
           
             <div class="card card--today">
-              <object type="image/svg+xml" data="/src/img/icons/sun.svg" class="card__icon card--today__icon"></object>
+              <svg class="card__icon card--today__icon">
+                <use xlink:href="/src/img/icons.svg#icon-sun"></use>
+              </svg>
               <div class="card__text">
                 <p class="card__text--p">Indice</p>
                 <p class="card__text--p">UV</p>
@@ -179,7 +209,9 @@
             </div>
           
             <div class="card card--today">
-              <object type="image/svg+xml" data="/src/img/icons/clouds.svg" class="card__icon card--today__icon"></object>
+              <svg class="card__icon card--today__icon">
+                <use xlink:href="/src/img/icons.svg#icon-clouds"></use>
+              </svg>
               <div class="card__text">
                 <p class="card__text--p">Nubes</p>
               </div>
@@ -202,23 +234,35 @@
             <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
 
             <div class="card--daily__info">
-              <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
+              <!-- <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object> -->
+              <svg class="card__icon">
+                <use xlink:href="/src/img/icons.svg#icon-clouds-sun"></use>
+              </svg>
               <p class="card--daily__info-text">Parcialmente nublado</p>
             </div>
 
             <div class="card--daily__extras">
               <div class="extras__item">
-                <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-wind"></use>
+                </svg>
                 <p class="extras__item-text">19 km/h</p>
               </div>
 
               <div class="extras__item">
-                <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-raindrops"></use>
+                </svg>
                 <p class="extras__item-text">60%</p>
               </div>
 
               <div class="extras__item">
-                <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-sun"></use>
+                </svg>
                 <p class="extras__item-text">Bajo</p>
               </div>
             </div>
@@ -231,22 +275,35 @@
             </div>
             <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
             <div class="card--daily__info">
-              <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
+              <!-- <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object> -->
+              <svg class="card__icon">
+                <use xlink:href="/src/img/icons.svg#icon-clouds-sun"></use>
+              </svg>
               <p class="card--daily__info-text">Parcialmente nublado</p>
             </div>
+            
             <div class="card--daily__extras">
               <div class="extras__item">
-                <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-wind"></use>
+                </svg>
                 <p class="extras__item-text">19 km/h</p>
               </div>
-
+            
               <div class="extras__item">
-                <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-raindrops"></use>
+                </svg>
                 <p class="extras__item-text">60%</p>
               </div>
-
+            
               <div class="extras__item">
-                <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-sun"></use>
+                </svg>
                 <p class="extras__item-text">Bajo</p>
               </div>
             </div>
@@ -259,22 +316,35 @@
             </div>
             <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
             <div class="card--daily__info">
-              <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
+              <!-- <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object> -->
+              <svg class="card__icon">
+                <use xlink:href="/src/img/icons.svg#icon-clouds-sun"></use>
+              </svg>
               <p class="card--daily__info-text">Parcialmente nublado</p>
             </div>
+            
             <div class="card--daily__extras">
               <div class="extras__item">
-                <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-wind"></use>
+                </svg>
                 <p class="extras__item-text">19 km/h</p>
               </div>
-
+            
               <div class="extras__item">
-                <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-raindrops"></use>
+                </svg>
                 <p class="extras__item-text">60%</p>
               </div>
-
+            
               <div class="extras__item">
-                <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-sun"></use>
+                </svg>
                 <p class="extras__item-text">Bajo</p>
               </div>
             </div>
@@ -287,22 +357,35 @@
             </div>
             <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
             <div class="card--daily__info">
-              <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
+              <!-- <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object> -->
+              <svg class="card__icon">
+                <use xlink:href="/src/img/icons.svg#icon-clouds-sun"></use>
+              </svg>
               <p class="card--daily__info-text">Parcialmente nublado</p>
             </div>
+            
             <div class="card--daily__extras">
               <div class="extras__item">
-                <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-wind"></use>
+                </svg>
                 <p class="extras__item-text">19 km/h</p>
               </div>
-
+            
               <div class="extras__item">
-                <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-raindrops"></use>
+                </svg>
                 <p class="extras__item-text">60%</p>
               </div>
-
+            
               <div class="extras__item">
-                <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-sun"></use>
+                </svg>
                 <p class="extras__item-text">Bajo</p>
               </div>
             </div>
@@ -315,22 +398,35 @@
             </div>
             <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
             <div class="card--daily__info">
-              <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
+              <!-- <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object> -->
+              <svg class="card__icon">
+                <use xlink:href="/src/img/icons.svg#icon-clouds-sun"></use>
+              </svg>
               <p class="card--daily__info-text">Parcialmente nublado</p>
             </div>
+            
             <div class="card--daily__extras">
               <div class="extras__item">
-                <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-wind"></use>
+                </svg>
                 <p class="extras__item-text">19 km/h</p>
               </div>
-
+            
               <div class="extras__item">
-                <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-raindrops"></use>
+                </svg>
                 <p class="extras__item-text">60%</p>
               </div>
-
+            
               <div class="extras__item">
-                <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-sun"></use>
+                </svg>
                 <p class="extras__item-text">Bajo</p>
               </div>
             </div>
@@ -343,22 +439,35 @@
             </div>
             <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
             <div class="card--daily__info">
-              <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
+              <!-- <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object> -->
+              <svg class="card__icon">
+                <use xlink:href="/src/img/icons.svg#icon-clouds-sun"></use>
+              </svg>
               <p class="card--daily__info-text">Parcialmente nublado</p>
             </div>
+            
             <div class="card--daily__extras">
               <div class="extras__item">
-                <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-wind"></use>
+                </svg>
                 <p class="extras__item-text">19 km/h</p>
               </div>
-
+            
               <div class="extras__item">
-                <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-raindrops"></use>
+                </svg>
                 <p class="extras__item-text">60%</p>
               </div>
-
+            
               <div class="extras__item">
-                <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-sun"></use>
+                </svg>
                 <p class="extras__item-text">Bajo</p>
               </div>
             </div>
@@ -371,22 +480,35 @@
             </div>
             <p class="card--daily__temp"><span class="card--daily__temp--max">21&deg;</span> / 18&deg;</p>
             <div class="card--daily__info">
-              <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object>
+              <!-- <object data="/src/img/icons/clouds-sun.svg" type="image/svg+xml" class="card__icon"></object> -->
+              <svg class="card__icon">
+                <use xlink:href="/src/img/icons.svg#icon-clouds-sun"></use>
+              </svg>
               <p class="card--daily__info-text">Parcialmente nublado</p>
             </div>
+
             <div class="card--daily__extras">
               <div class="extras__item">
-                <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/wind.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-wind"></use>
+                </svg>
                 <p class="extras__item-text">19 km/h</p>
               </div>
 
               <div class="extras__item">
-                <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/raindrops.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-raindrops"></use>
+                </svg>
                 <p class="extras__item-text">60%</p>
               </div>
 
               <div class="extras__item">
-                <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object>
+                <!-- <object data="/src/img/icons/sun.svg" type="image/svg+xml" class="card__icon extras__item-icon"></object> -->
+                <svg class="card__icon">
+                  <use xlink:href="/src/img/icons.svg#icon-sun"></use>
+                </svg>
                 <p class="extras__item-text">Bajo</p>
               </div>
             </div>
@@ -395,6 +517,9 @@
       </section>
     </main>
 
+    <div class="layer">
+      <div class="loader"></div>
+    </div>
   </div>
   <script type="module" src="js/app.js"></script>
 </body>

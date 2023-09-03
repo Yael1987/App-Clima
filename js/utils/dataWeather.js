@@ -165,80 +165,80 @@ const weatherRain = {
       full: ["Lluvia", "ligera"],
       short: ["Lluvia", "ligera"],
     },
-    day: "./src/img/icons/cloud-sun-rain.svg",
-    night: "./src/img/icons/cloud-moon-rain.svg",
+    day: "cloud-sun-rain",
+    night: "cloud-moon-rain",
   },
   501: {
     description: {
       full: ["Lluvia"],
       short: ["Lluvia"]
     },
-    day: "./src/img/icons/cloud-rain.svg",
-    night: "./src/img/icons/cloud-rain.svg",
+    day: "cloud-rain",
+    night: "cloud-rain",
   },
   502: {
     description: {
       full: ["Lluvia", "fuerte"],
       short: ["Lluvia", "fuerte"],
     },
-    day: "./src/img/icons/cloud-rain.svg",
-    night: "./src/img/icons/cloud-rain.svg",
+    day: "cloud-rain",
+    night: "cloud-rain",
   },
   503: {
     description: {
       full: ["Lluvia", "intensa"],
       short: ["Lluvia", "intensa"],
     },
-    day: "./src/img/icons/cloud-showers-heavy.svg",
-    night: "./src/img/icons/cloud-showers-heavy.svg",
+    day: "cloud-showers-heavy",
+    night: "cloud-showers-heavy",
   },
   504: {
     description: {
       full: ["Lluvia", "extrema"],
       short: ["Lluvia", "extrema"]
     },
-    day: "./src/img/icons/cloud-showers-heavy.svg",
-    night: "./src/img/icons/cloud-showers-heavy.svg",
+    day: "cloud-showers-heavy",
+    night: "cloud-showers-heavy",
   },
   511: {
     description: {
       full: ["Lluvia", "helada"],
       short: ["Lluvia", "helada"],
     },
-    day: "./src/img/icons/cloud-rain.svg",
-    night: "./src/img/icons/cloud-rain.svg",
+    day: "cloud-rain",
+    night: "cloud-rain",
   },
   520: {
     description: {
       full: ["Aguacero", "ligero"],
       short: ["Aguacero", "ligero"],
     },
-    day: "./src/img/icons/cloud-sun-rain",
-    night: "./src/img/icons/cloud-moon-rain.svg",
+    day: "cloud-sun-rain",
+    night: "cloud-moon-rain",
   },
   521: {
     description: {
       full: ["Aguacero"],
       short: ["Aguacero"]
     },
-    day: "./src/img/icons/cloud-showers-heavy.svg",
-    night: "./src/img/icons/cloud-showers-heavy.svg",
+    day: "cloud-showers-heavy",
+    night: "cloud-showers-heavy",
   },
   522: {
     description: {
       full: ["Aguacero", "fuerte"],
       short: ["Aguacero", "fuerte"],
     },
-    day: "./src/img/icons/cloud-showers-heavy.svg",
-    night: "./src/img/icons/cloud-showers-heavy.svg",
+    day: "cloud-showers-heavy",
+    night: "cloud-showers-heavy",
   },
   531: {
     description: {
       full: ["Aguacero", "intermitente"],
       short: ["Aguacero", "intermitente"],
     },
-    day: "./src/img/icons/cloud-showers-heavy.svg",
-    night: "./src/img/icons/cloud-showers-heavy.svg",
+    day: "cloud-showers-heavy",
+    night: "cloud-showers-heavy",
   },
 };
 
@@ -425,40 +425,40 @@ const weatherClouds = {
       full: ["Cielo", "despejado"],
       short: ["Cielo", "despejado"],
     },
-    day: "./src/img/icons/sun.svg",
-    night: "./src/img/icons/moon.svg",
+    day: "sun",
+    night: "moon",
   },
   801: {
     description: {
       full: ["Pocas nubes"],
       short: ["Pocas", "Nubes"],
     },
-    day: "./src/img/icons/sun-cloud.svg",
-    night: "./src/img/icons/moon-cloud.svg",
+    day: "sun-cloud",
+    night: "moon-cloud",
   },
   802: {
     description: {
       full: ["Nubes", "dispersas"],
       short: ["Nubes", "dispersas"],
     },
-    day: "./src/img/icons/sun-cloud.svg",
-    night: "./src/img/icons/moon-cloud.svg",
+    day: "sun-cloud",
+    night: "moon-cloud",
   },
   803: {
     description: {
       full: ["Nublado", "ligeramente"],
       short: ["Nublado", "ligeramente"],
     },
-    day: "./src/img/icons/clouds-sun.svg",
-    night: "./src/img/icons/clouds-moon.svg",
+    day: "clouds-sun",
+    night: "clouds-moon",
   },
   804: {
     description: {
       full: ["Nublado"],
       short: ["Nublado"],
     },
-    day: "./src/img/icons/clouds.svg",
-    night: "./src/img/icons/clouds.svg",
+    day: "clouds",
+    night: "clouds",
   },
 };
 

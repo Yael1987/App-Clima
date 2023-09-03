@@ -14,14 +14,22 @@ const dataFormater = new DataFormater();
 
 document.addEventListener("DOMContentLoaded", () => {
   const btnGetLocation = document.querySelector('.btn--get-location');
+  const inputSearch = document.querySelector('.search-field__input')
 
   btnGetLocation.addEventListener('click', () => {
-    controller.getCurrentLocation();
+    controller.weatherByLocation();
   });
+
+  inputSearch.addEventListener('focus', e => {
+    ui.searchActive();
+  })
+
+  inputSearch.addEventListener('blur', e => {
+    ui.searchActive('remove');
+  })
 });
 
 export {
-  controller,
   ui,
   api,
   dataFormater

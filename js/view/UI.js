@@ -1,21 +1,24 @@
 import { dataFormater } from "../app.js";
 import getWeatherDescription from '../utils/dataWeather.js'
 export default class UI {
-  constructor() {
-    this.currentHour;
-  }
+  currentHour;
 
   displayData(weatherData, cityData, date) {
-
+    //1) Sets the current hour for custom iamges and icons
     this.currentHour = +date.slice(-5, -3);
 
+    //2) Using the current hour set the background image
     this.changeBackgroundImage(this.currentHour);
 
+    //3) Displays the city and date information
     this.displayHeaderContent(cityData, date);
 
+    //4) Displays the current weather information
     this.displayCurrentWeather(weatherData.current);
 
     this.displayHourlyWeather(weatherData.hourly);
+
+    this.displayDailyWeather(weatherData.daily);
   }
 
   changeBackgroundImage() {
@@ -42,6 +45,7 @@ export default class UI {
     }
   }
 
+  //Displays the current date and the city information
   displayHeaderContent(cityData, date) {
     const dateDiv = document.querySelector(".header__text-date");
     const locationDiv = document.querySelector(".header__text-location");
@@ -52,40 +56,43 @@ export default class UI {
     locationDiv.innerHTML = `${city ? 'Cd ' + city : state} / ${country}`;
   }
 
+  //Displays the current weather information
   displayCurrentWeather(currentWeather) {
     const {temp, weatherId, ...todayData} = currentWeather;
 
     const tempDiv = document.querySelector(".description__temp");
     const descriptionDivPrimary = document.querySelector(".description__name-primary")
-    const descriptionDivPrimaryConector = document.querySelector(".description__name-primary > span")
+    let descriptionDivPrimaryConector = document.querySelector(".description__name-primary > span")
     const descriptionDivSecondary = document.querySelector(".description__name-secondary")
-    const iconDiv = document.querySelector(".description__icon");
+    const iconSVG = document.querySelector(".description__icon");
+
+    if (!descriptionDivPrimaryConector) {
+      descriptionDivPrimaryConector = document.createElement('span');
+      descriptionDivPrimary.appendChild(descriptionDivPrimaryConector);
+    }
 
     tempDiv.innerHTML = `${parseInt(temp)}&deg;C`;
 
-    const {description, iconUrl} = getWeatherDescription(weatherId, this.currentHour, 'full');
+    //Gets the icon and the description of the weather
+    const { description, iconUrl } = getWeatherDescription(weatherId, this.currentHour, 'full');
 
     //Displays the weather description
     if (description.length === 1) {
       descriptionDivPrimary.innerHTML = description[0];
       descriptionDivPrimaryConector.innerHTML = "&nbsp;";
       descriptionDivSecondary.innerHTML = '&nbsp;';
-    }
-
-    if (description.length === 2) {
+    }else if (description.length === 2) {
       descriptionDivPrimary.innerHTML = description[0];
       descriptionDivPrimaryConector.innerHTML = "&nbsp;";
       descriptionDivSecondary.innerHTML = description[1];
-    }
-
-    if (description.length === 3) {
+    }else if (description.length === 3) {
       descriptionDivPrimary.innerHTML = description[0];
       descriptionDivPrimaryConector.innerHTML = description[1];
       descriptionDivSecondary.innerHTML = description[2];
     }
     
     //Displays the weather icon
-    iconDiv.data = iconUrl;
+    iconSVG.innerHTML = `<use xlink:href="./src/img/icons.svg#icon-${iconUrl}"></use>`;
 
     const todayInfoCards = document.querySelectorAll('.card--today .card__unit');
 
@@ -111,34 +118,7 @@ export default class UI {
       }
 
       if (cardEl.classList.contains('uvi')){
-        // cardEl.textContent = `${(todayData.uvi)} `;
-
-        const spanUV = document.createElement('span');
-        spanUV.classList.add('span-sm');
-
-        if (todayData.uvi <= 2) {
-          spanUV.textContent = `Bajo`;
-        }
-
-        if (todayData <= 5) {
-          spanUV.textContent = `Medio`;
-        }
-
-        if (todayData <= 7) {
-          spanUV.textContent = `Alto`;
-        }
-
-        if (todayData <= 10) {
-          spanUV.innerHTML = `Muy\nAlto`;
-        }
-
-        if (todayData > 10) { 
-          spanUV.textContent = `Extremo`;
-        }
-
-        cardEl.removeChild(cardEl.firstChild);
-
-        cardEl.appendChild(spanUV);
+        cardEl.textContent = `${parseInt(todayData.uvi)} `;
       }
 
       if (cardEl.classList.contains("clouds")) {
@@ -148,7 +128,6 @@ export default class UI {
   }
 
   displayHourlyWeather(hourlyWeather) {
-    console.log(hourlyWeather);
     const hourlyInfoCards = document.querySelectorAll('.card--hourly');
     
     hourlyInfoCards.forEach((cardEl, index) => {
@@ -156,11 +135,11 @@ export default class UI {
 
       const { description, iconUrl } = getWeatherDescription(weatherId, +time);
 
-      this.clearHTML(cardEl.children[2]);
+      this.clearHTML(cardEl.querySelector(".card__text"));
 
-      cardEl.children[0].textContent = `${time}:00`;
+      cardEl.querySelector(".card--hourly__time").textContent = `${time}:00`;
 
-      cardEl.children[1].data = iconUrl;
+      cardEl.querySelector('.card__icon').innerHTML = `<use xlink:href="./src/img/icons.svg#icon-${iconUrl}"></use>`;
 
       description.forEach((line) => {
         const pEl = document.createElement("p");
@@ -168,11 +147,60 @@ export default class UI {
 
         pEl.textContent = line;
 
-        cardEl.children[2].appendChild(pEl);
+        cardEl.querySelector('.card__text').appendChild(pEl);
       });
 
-      cardEl.children[3].innerHTML = `${parseInt(temp)}&deg;`;
+      cardEl.querySelector('.card__unit').innerHTML = `${parseInt(temp)}&deg;`;
     })
+  }
+
+  displayDailyWeather(dailyWeather) {
+    const dailyInfoCards = document.querySelectorAll('.card--daily')
+    
+    dailyInfoCards.forEach((card, i) => {
+      const {humidity, temp, time, uvi, weatherId, wind_speed} = dailyWeather[i];
+      
+      //Displays the date information in two lines 
+      const dayData = dataFormater.formatDateForCard(time)
+      card.querySelector('.card--daily__date').children[0].textContent = dayData.full
+      card.querySelector(".card--daily__date").children[1].textContent = dayData.day;
+
+      const spanMax = document.createElement("span");
+      spanMax.classList.add("card--daily__temp--max");
+      spanMax.innerHTML = `${parseInt(temp.max)}&deg;`;
+
+      card.querySelector('.card--daily__temp').innerHTML = ` / ${parseInt(temp.min)}&deg;`;
+      card.querySelector('.card--daily__temp').insertAdjacentElement('afterbegin', spanMax)
+
+      const {description, iconUrl} = getWeatherDescription(weatherId, 6);
+
+      card.querySelector('.card--daily__info').children[0].innerHTML = `<use xlink:href="./src/img/icons.svg#icon-${iconUrl}"></use>`;
+      card.querySelector('.card--daily__info').children[1].textContent = description.join(' ')
+
+      card.querySelector('.card--daily__extras').querySelectorAll('.extras__item').forEach((extra, i) => {
+        if (i === 0) {
+          extra.querySelector('.extras__item-text').textContent = `${wind_speed} m/s`;
+        } else if (i === 1) {
+          extra.querySelector('.extras__item-text').textContent = `${humidity}%`;
+        } else if (i === 2) {
+          extra.querySelector('.extras__item-text').textContent = parseInt(uvi);
+        }
+      })
+    })
+  }
+
+  spinner(action = 'add') {
+    const body = document.querySelector('body');
+    const layer = document.querySelector('.layer');
+
+    body.classList[action]('searching');
+    layer.classList[action]('loading');
+  }
+
+  searchActive(action = 'add') {
+    const body = document.querySelector("body");
+
+    body.classList[action]("searching");
   }
 
   clearHTML(el) {
