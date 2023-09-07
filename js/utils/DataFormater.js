@@ -9,7 +9,7 @@ export default class DataFormater {
     this.timeZone = timeZone;
 
     const options = {
-      weekday: "short",
+      weekday: "long",
       month: "short",
       day: "numeric",
       hour: "numeric",

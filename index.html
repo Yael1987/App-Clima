@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <script src="https://kit.fontawesome.com/539a1f1ab7.js" crossorigin="anonymous"></script> -->
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -15,6 +14,7 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
 
   <title>Weathy</title>
 </head>
@@ -32,7 +32,7 @@
           </label>
 
           <div class="search-field__input-container">
-            <input type="search" id="searching" class="search-field__input" placeholder="Buscar una ciudad...">
+            <input type="search" id="searching" class="search-field__input" placeholder="Buscar una ciudad..." autocomplete="off">
             
             <button class="btn btn--clear-search">
               <ion-icon name="close-outline" class="btn-icon"></ion-icon>
@@ -44,8 +44,7 @@
           </button>
 
           <div class="search-matches">
-            <div class="search-matches__el">Match 1</div>
-            <div class="search-matches__el">Match 2</div>
+            <div class="search-matches__el no-matches">Coincidencias no encontradas...</div>
           </div>
         </form>
 

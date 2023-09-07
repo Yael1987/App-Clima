@@ -3,82 +3,82 @@ const weatherThunderstorm = {
   200: {
     description: {
       full: ["Tormenta", "y", "lluvia ligera"],
-      short: ["Tormeta"]
+      short: ["Tormeta"],
     },
-    day: "./src/img/icons/",
-    night: "./src/img/icons/",
+    day: "cloud-bolt-sun",
+    night: "cloud-bolt-moon",
   },
   201: {
     description: {
       full: ["Tormenta", "y", "lluvia"],
-      short: ["Tormenta"]
+      short: ["Tormenta"],
     },
-    day: "./src/img/icons/",
-    night: "./src/img/icons/",
+    day: "cloud-bolt-sun",
+    night: "cloud-bolt-moon",
   },
   202: {
     description: {
       full: ["Tormenta", "y", "lluvia fuerte"],
-      short: ["Tormenta"]
+      short: ["Tormenta"],
     },
-    day: "./src/img/icons/",
-    night: "./src/img/icons/",
+    day: "cloud-bolt-sun",
+    night: "cloud-bolt-moon",
   },
   210: {
     description: {
       full: ["Tormenta", "ligera"],
       short: ["Tormenta", "ligera"],
     },
-    day: "./src/img/icons/",
-    night: "./src/img/icons/",
+    day: "cloud-bolt-sun",
+    night: "cloud-bolt-moon",
   },
   211: {
     description: {
       full: ["Tormenta"],
-      short: ["Tormenta"]
+      short: ["Tormenta"],
     },
-    day: "./src/img/icons/",
-    night: "./src/img/icons/",
+    day: "cloud-bolt-sun",
+    night: "cloud-bolt-moon",
   },
   212: {
     description: {
       full: ["Tormenta", "fuerte"],
       short: ["Tormenta", "fuerte"],
     },
-    day: "./src/img/icons/",
-    night: "./src/img/icons/",
+    day: "cloud-bolt-sun",
+    night: "cloud-bolt-moon",
   },
   221: {
     description: {
       full: ["Tormenta", "dispersa"],
       short: ["Tormenta", "dispersa"],
     },
-    day: "./src/img/icons/",
-    night: "./src/img/icons/",
+    day: "cloud-bolt-sun",
+    night: "cloud-bolt-moon",
   },
   230: {
     description: {
       full: ["Tormenta", "y", "llovizna ligera"],
-      short: ["Tormenta"]
+      short: ["Tormenta"],
     },
-    day: "./src/img/icons/",
-    night: "./src/img/icons/",
+    day: "cloud-bolt-sun",
+    night: "cloud-bolt-moon",
   },
   231: {
     description: {
       full: ["Tormenta", "y", "llovizna"],
-      short: ["Tormenta"]
+      short: ["Tormenta"],
     },
-    day: "./src/img/icons/",
-    night: "./src/img/icons/",
+    day: "cloud-bolt-sun",
+    night: "cloud-bolt-moon",
   },
   232: {
     description: {
       full: ["Tormenta", "y", "llovizna fuerte"],
-      short: ["Tormenta"]
+      short: ["Tormenta"],
     },
-    day: "./src/img/icons/",
-    night: "./src/img/icons/",
+    day: "cloud-bolt-sun",
+    night: "cloud-bolt-moon",
   },
 };
 
@@ -473,8 +473,15 @@ const getWeatherDescription = (id, time, long = 'short') => {
     dayTime = 'night';
   }
 
+  if (id >= 200 && id < 300) {    
+    return {
+      description: weatherThunderstorm[id].description[long],
+      iconUrl: weatherThunderstorm[id][dayTime],
+    };
+  }
+
   //Rain
-  if (id >= 500 & id < 600) {
+  if (id >= 500 && id < 600) {
     return {
       description: weatherRain[id].description[long],
       iconUrl: weatherRain[id][dayTime]
@@ -482,7 +489,7 @@ const getWeatherDescription = (id, time, long = 'short') => {
   }    
 
   //Clouds 
-  if (id >= 800 & id <= 804) {
+  if (id >= 800 && id <= 804) {
     return {
       description: weatherClouds[id].description[long],
       iconUrl: weatherClouds[id][dayTime]

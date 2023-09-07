@@ -1,11 +1,13 @@
 import { dataFormater } from "../app.js";
 
 export default class API {
+  fetchController = null;
+
   callGeolocation() {
     return new Promise((resolve, reject) => {
       if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
-          position =>
+          (position) =>
             resolve({
               success: true,
               data: {
@@ -13,7 +15,7 @@ export default class API {
                 lng: position.coords.longitude,
               },
             }),
-          error =>
+          (error) =>
             resolve({
               success: false,
               message: "Geolocation permission denied",
@@ -22,14 +24,14 @@ export default class API {
       } else {
         resolve({
           success: false,
-          message: "Geolocation not supported for this browser"
-        })
+          message: "Geolocation not supported for this browser",
+        });
       }
     });
-  };
+  }
 
-  async getWeather({ lat, lng }) {
-    //Sets de url of the API 
+  async getWeather({lat, lng}) {
+    //Sets de url of the API
     const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lng}&appid=143328e49e68626ede078c0fb85e7c8d&lang=es&units=metric`;
 
     try {
@@ -37,33 +39,42 @@ export default class API {
       const response = await fetch(url);
       const data = await response.json();
 
-      const { timezone, current, hourly, daily } = data;
-      const { clouds, temp, humidity, sunrise, sunset, uvi, weather, wind_speed } = current; //Extracting the data of the current weather
+      const {timezone, current, hourly, daily} = data;
+      const {
+        clouds,
+        temp,
+        humidity,
+        sunrise,
+        sunset,
+        uvi,
+        weather,
+        wind_speed,
+      } = current; //Extracting the data of the current weather
 
       //3) Extract de needed data and returns it to the user
-      const hourlyData = hourly.slice(1, 7).map(dataEl => {
-        const { dt, temp, weather } = dataEl;
+      const hourlyData = hourly.slice(1, 7).map((dataEl) => {
+        const {dt, temp, weather} = dataEl;
 
         return {
           time: dataFormater.formatHourFromUnix(dt),
           temp,
-          weatherId: weather[0].id
+          weatherId: weather[0].id,
         };
       });
 
-      const dailyData = daily.slice(1).map(dataEl => {
-        const { dt, temp, weather, uvi, wind_speed, humidity } = dataEl;
+      const dailyData = daily.slice(1).map((dataEl) => {
+        const {dt, temp, weather, uvi, wind_speed, humidity} = dataEl;
 
         return {
           time: new Date(dt * 1000),
           temp: {
             min: temp.min,
-            max: temp.max
+            max: temp.max,
           },
           weatherId: weather[0].id,
-          uvi, 
+          uvi,
           wind_speed,
-          humidity
+          humidity,
         };
       });
 
@@ -88,8 +99,8 @@ export default class API {
     } catch (error) {
       return {
         success: false,
-        message: error
-      }
+        message: error,
+      };
     }
   }
 
@@ -100,21 +111,62 @@ export default class API {
       const response = await fetch(url);
       const data = await response.json();
 
-      const { city, country, state } = data.address;
+      const {city, country, state} = data.address;
 
       return {
         success: true,
         data: {
           city,
           country,
-          state
-        }
+          state,
+        },
       };
     } catch (error) {
       return {
         success: false,
-        message: error
+        message: error,
+      };
+    }
+  }
+
+  async getCitySuggestions(input, type = 'suggest') {
+    try {
+      this.fetchController = new AbortController();
+  
+      const response = await fetch(
+        `https://nominatim.openstreetmap.org/search?q=${input}&format=json`,
+        {
+          signal: this.fetchController.signal,
+        }
+      );
+      const data = await response.json();
+
+      if (type === 'suggest') { 
+        const responseData = data.map(city => city.display_name);
+
+        return {
+          success: true,
+          suggestions: responseData,
+          fetchController: this.fetchController,
+        }
+      } else if (type === 'search') {
+        return {
+          success: true,
+          data: {
+            lat: data[0].lat,
+            lng: data[0].lon,
+          }
+        }
+      }
+    } catch (error) {
+      return {
+        success: false,
+        message: error.message,
       }
     }
+  }
+
+  abortFetch() {
+    this.fetchController.abort();
   }
 }
